@@ -16,4 +16,20 @@
 * Documentación en Swagger (se generó automáticamente)
 * Creación de demás endPoints
 
+### Consideraciones para despliegue con Docker
+**El proyecto se encuentra configurado para ejecutarse siempre en el puerto 5024**
+
+Pasos para el despliegue
+```sh
+# navegamos por la terminal hasta donde esté el archivo Dockerfile
+# creamos la imagen con el comando:
+docker build -t imagen-matriz .
+
+# iniciamos el contenedor
+docker run -d -p 5024:5024 --name app-matriz imagen-matriz
+```
+
+### Ahora la aplicación se encuentra disponible en localhost:5024 y podemos utilizarla con Postman, como se detalla en la imagen de arriba.
+
+
 # Gracias!
